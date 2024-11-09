@@ -407,8 +407,6 @@ h6 {
   }
 }
 
-
-
 @media (max-width: 576px) {
   /* Thêm padding cho carousel-caption ở màn hình nhỏ */
   .carousel-caption {

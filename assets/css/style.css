@@ -2,6 +2,7 @@
   --primary-color: #15202B;
   --secondary-color: #ff6b00;
   --light-gray: #f8f9fa;
+  --light-blue: #2980d6;
 }
 
 
@@ -20,6 +21,12 @@ h6 {
   font-family: 'Montserrat', Arial, sans-serif;
 }
 
+.box-shadow {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Custom Navbar Styles */
 .custom-navbar {
   background-color: var(--primary-color);
@@ -35,6 +42,7 @@ h6 {
   color: white !important;
   /* transition: background-color 0.3s; */
   transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
 }
 
 .custom-navbar .nav-link:hover {
@@ -403,13 +411,194 @@ h6 {
 /* Responsive cho carousel */
 @media (max-width: 1200px) {
   .c-item {
-    height: 450px; /* Điều chỉnh chiều cao cho màn hình trung bình */
+    height: 450px;
+    /* Điều chỉnh chiều cao cho màn hình trung bình */
   }
 }
 
 @media (max-width: 576px) {
+
   /* Thêm padding cho carousel-caption ở màn hình nhỏ */
   .carousel-caption {
     margin-top: -1rem;
   }
+}
+
+/* SLICK */
+/* Hiệu ứng hover cho sản phẩm */
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Thay đổi từ space-between sang flex-start */
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-1px);
+  /* Đẩy sản phẩm lên khi hover */
+  cursor: pointer;
+  box-shadow: 0 1px rgba(71, 71, 71, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  height: 48px;
+  /* Chiều cao cố định cho 2 dòng text */
+  overflow: hidden;
+  display: -webkit-box;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.product:hover .product-title {
+  color: var(--secondary-color);
+}
+
+.btn-lien-he {
+  border: none;
+  color: red;
+  margin-top: auto;
+  /* Đẩy nút xuống cuối container */
+  align-self: center;
+  /* Căn giữa theo chiều ngang */
+}
+
+.btn-lien-he:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-gray);
+}
+
+.btn-xem-them:hover {
+  color: var(--light-blue);
+}
+
+/* Kiểu dáng cho nút điều hướng */
+/* Tùy chỉnh style cho các nút điều hướng */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  /* Kích thước nút */
+  height: 40px;
+  background: #fff;
+  /* Màu nền */
+  z-index: 1;
+  /* Đảm bảo nút hiển thị trên các phần tử khác */
+}
+
+/* Vị trí của các nút */
+.slick-prev {
+  left: -20px;
+  /* Di chuyển nút prev ra ngoài */
+}
+
+.slick-next {
+  right: -20px;
+  /* Di chuyển nút next ra ngoài */
+}
+
+/* Tùy chỉnh mũi tên */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 1rem;
+  color: #242424;
+  /* Màu mũi tên */
+  opacity: 1;
+}
+
+/* Hiệu ứng hover */
+.slick-prev:hover,
+.slick-next:hover {
+  /* Màu nền khi hover */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+}
+
+footer {
+  font-size: 14px;
+}
+
+.btn-email {
+  background-color: var(--primary-color);
+  color: var(--light-gray);
+}
+
+.btn-email:hover {
+  color: var(--light-gray);
+}
+
+
+footer h5 {
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+footer h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--bs-primary);
+}
+
+footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+footer .list-unstyled li a {
+  transition: all 0.3s ease;
+}
+
+footer .list-unstyled li a:hover {
+  padding-left: 8px;
+  color: var(--bs-primary) !important;
+}
+
+footer .btn-primary {
+  padding: 8px 20px;
+}
+
+footer .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+footer .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }

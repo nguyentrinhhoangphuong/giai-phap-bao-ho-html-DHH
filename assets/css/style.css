@@ -450,6 +450,7 @@ h6 {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .product-title {
@@ -604,7 +605,20 @@ footer .form-control::placeholder {
 }
 
 
-/* CHI TIẾT SẢN PHẨM */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== CHI TIẾT SẢN PHẨM */
 .product-image-gallery {
   display: flex;
   flex-direction: column;
@@ -641,7 +655,6 @@ footer .form-control::placeholder {
   opacity: 0.8;
   border: 2px solid var(--secondary-color);
 }
-
 
 
 .contact-buttons {
@@ -706,26 +719,6 @@ footer .form-control::placeholder {
   padding-left: 10px;
 }
 
-
-.list-group-item {
-  font-size: 0.95rem;
-  border: none;
-  padding: 0.75rem 1rem;
-  background-color: var(--light-gray);
-  margin-bottom: 0.5rem;
-  border-radius: 5px;
-}
-
-.list-group-item:hover {
-  background-color: #f1f8ff; /* Thay đổi màu nền khi hover */
-  transform: translateX(5px); /* Hiệu ứng di chuyển nhẹ sang phải */
-  transition: all 0.3s ease-in-out; /* Mượt mà hơn */
-}
-
-.list-group-item i {
-  font-size: 1.1rem;
-}
-
 .product-card {
   text-align: center;
   padding: 10px;
@@ -763,11 +756,39 @@ footer .form-control::placeholder {
   font-weight: bold;
 }
 
-.responsive img {
-  width: 100%; /* Đặt chiều rộng cố định */
-  height: 15rem; /* Đặt chiều cao cố định */
-  object-fit: cover; /* Cắt ảnh cho vừa khung */
-  cursor: pointer;
-  transition: transform 0.2s, opacity 0.3s;
-  padding: 0 1rem;
+.responsive .product-image {
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của sản phẩm */
+  height: 200px; /* Chiều cao mặc định cho hình ảnh */
+  object-fit: cover; /* Cắt bớt hình ảnh nếu cần */
+  border-radius: 8px; /* Bo góc hình ảnh */
+}
+
+
+/* Responsive cho các thiết bị nhỏ hơn */
+@media (max-width: 767px) {
+  .product-image {
+    height: 150px; /* Giảm chiều cao của hình ảnh trên các màn hình nhỏ */
+  }
+  .product-image-gallery{
+    margin-bottom: 2rem;
+  }
+
+  .responsive .product-image {
+    height: 100px; /* Chiều cao mặc định cho hình ảnh */
+    object-fit: cover; /* Cắt bớt hình ảnh nếu cần */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-image {
+    height: 120px; /* Giảm chiều cao hơn nữa trên các màn hình rất nhỏ */
+  }
+  .product-image-gallery{
+    margin-bottom: 2rem;
+  }
+
+  .responsive .product-image {
+    height: 100px; /* Chiều cao mặc định cho hình ảnh */
+    object-fit: cover; /* Cắt bớt hình ảnh nếu cần */
+  }
 }

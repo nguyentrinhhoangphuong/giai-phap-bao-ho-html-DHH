@@ -766,29 +766,22 @@ footer .form-control::placeholder {
 
 /* Responsive cho các thiết bị nhỏ hơn */
 @media (max-width: 767px) {
-  .product-image {
-    height: 150px; /* Giảm chiều cao của hình ảnh trên các màn hình nhỏ */
-  }
   .product-image-gallery{
     margin-bottom: 2rem;
   }
-
+  .responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Khoảng cách giữa các sản phẩm */
+  }
+  .responsive .product {
+      width: calc(50% - 10px); /* Hai sản phẩm mỗi hàng */
+      text-align: center;
+  }
   .responsive .product-image {
-    height: 100px; /* Chiều cao mặc định cho hình ảnh */
-    object-fit: cover; /* Cắt bớt hình ảnh nếu cần */
+      height: 120px; /* Chiều cao cố định */
+      object-fit: cover;
+      border-radius: 8px;
   }
 }
 
-@media (max-width: 480px) {
-  .product-image {
-    height: 120px; /* Giảm chiều cao hơn nữa trên các màn hình rất nhỏ */
-  }
-  .product-image-gallery{
-    margin-bottom: 2rem;
-  }
-
-  .responsive .product-image {
-    height: 100px; /* Chiều cao mặc định cho hình ảnh */
-    object-fit: cover; /* Cắt bớt hình ảnh nếu cần */
-  }
-}

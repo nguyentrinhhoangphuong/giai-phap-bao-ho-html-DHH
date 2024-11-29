@@ -881,13 +881,6 @@ footer .form-control::placeholder {
 }
 
 @media (max-width: 992px) {
-  .filter-container {
-      position: sticky;
-      top: 20px; /* Khoảng cách so với đầu trang */
-      max-height: calc(100vh - 40px); /* Đảm bảo không vượt quá chiều cao màn hình */
-      overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
-  }
-
   .custom-product-title {
     font-size: 12px;
     font-weight: bold;
@@ -939,5 +932,14 @@ footer .form-control::placeholder {
 
   .see-more-link {
       font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .filter-container {
+      position: sticky;
+      top: 20px; /* Khoảng cách so với đầu trang */
+      max-height: calc(100vh - 40px); /* Đảm bảo không vượt quá chiều cao màn hình */
+      overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
   }
 }

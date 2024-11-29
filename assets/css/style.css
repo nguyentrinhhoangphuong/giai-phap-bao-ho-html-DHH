@@ -930,10 +930,10 @@ footer .form-control::placeholder {
 
 @media (max-width: 576px) {
   .section-title {
-      font-size: 1rem;
+      font-size: 13px;
   }
 
   .see-more-link {
-      font-size: 0.75rem;
+      font-size: 12px;
   }
 }

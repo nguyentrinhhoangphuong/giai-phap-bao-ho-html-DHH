@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -49,149 +51,162 @@
     </header>
     <!-- End Header -->
 
-
-
-    <div class="container my-4 product-detail-container">
+    <!-- Main Content -->
+    <div class="container my-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="#">Thương hiệu</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
+                <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
             </ol>
         </nav>
         <div class="row">
-            <div class="col-md-6 product-image-gallery">
-                <img src="assets/images/helmet/1.jpg" alt="Sản phẩm chính" class="main-image img-fluid">
-                <div class="thumbnail-images">
-                    <img src="assets/images/helmet/1.jpg" alt="Thumbnail 1" class="thumbnail-image active">
-                    <img src="assets/images/helmet/2.jpg" alt="Thumbnail 2" class="thumbnail-image">
-                    <img src="assets/images/helmet/3.jpg" alt="Thumbnail 3" class="thumbnail-image">
-                    <img src="assets/images/helmet/4.jpg" alt="Thumbnail 4" class="thumbnail-image">
+            <!-- Filter Section -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="filter-container p-3">
+                    <h5 class="mb-3">Lọc sản phẩm</h5>
+                    <form id="desktopFilterForm">
+                        <!-- Filter by Category -->
+                        <div class="mb-4">
+                            <label class="form-label">Danh mục</label>
+                            <select class="form-select" id="category">
+                                <option value="">Tất cả</option>
+                                <option value="1">Bảo hộ lao động</option>
+                                <option value="2">Thiết bị công trình</option>
+                            </select>
+                        </div>
+
+                        <!-- Filter by Brand -->
+                        <div class="mb-4">
+                            <label class="form-label">Thương hiệu</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="3M" id="brand1">
+                                <label class="form-check-label" for="brand1">3M</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Honeywell" id="brand2">
+                                <label class="form-check-label" for="brand2">Honeywell</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Filter Section -->
+
+
+            <!-- Product List Section -->
+            <div class="col-lg-9">
+                <div class="row gy-4">
+                    <!-- Product Card -->
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/he-thong-kiem-tra-dien-tro-hioki-rm2610-12-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Laptop ASUS ZenBook 14 OLED UX3402ZA-KM147W – Intel Core i5, màn hình cảm ứng, thiết
+                                    kế siêu mỏng nhẹ
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <!-- Repeat Product Cards -->
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <!-- Thêm sản phẩm khác -->
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-6">
+                        <div class="custom-product-card">
+                            <a href="details.html">
+                                <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
+                                    alt="Tên sản phẩm" class="custom-product-image">
+                                <h2 class="custom-product-title">
+                                    Java Programming for Beginners
+                                </h2>
+                            </a>
+                            <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <h1>Mũ Bảo Hộ Kỹ Thuật Cao Cấp</h1>
-                <p class="text-muted">Mã sản phẩm: MBH-001</p>
-
-                <p>
-                    Mũ bảo hộ được thiết kế với công nghệ hiện đại, đáp ứng tiêu chuẩn an toàn quốc tế.
-                    Chất liệu nhựa ABS cao cấp, lớp đệm trong mềm mại, thoáng khí và điều chỉnh được kích thước.
-                </p>
-
-                <div class="contact-buttons">
-                    <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
-                </div>
-
-                <div class="product-features mt-4">
-                    <h4 class="text-secondary">Tính Năng Nổi Bật</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <i class="fa-solid fa-check"></i>
-                            Chất liệu nhựa ABS cao cấp, chống va đập và chịu lực tốt.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa-solid fa-check"></i>
-                            Thiết kế thông thoáng, có lớp đệm lót mềm mại, thoải mái khi sử dụng cả ngày dài.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa-solid fa-check"></i>
-                            Điều chỉnh kích thước dễ dàng, phù hợp với mọi kích cỡ đầu.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa-solid fa-check"></i>
-                            Đạt tiêu chuẩn quốc tế: EN 397 và ANSI Z89.1, đảm bảo an toàn trong môi trường khắc nghiệt.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa-solid fa-check"></i>
-                            Bề mặt phủ chống trầy xước, duy trì độ bền và tính thẩm mỹ cao.
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <div class="product-details-section mt-4">
-            <h3>Thông Số Kỹ Thuật</h3>
-            <table class="table table-striped">
-                <tr>
-                    <th>Chất Liệu</th>
-                    <td>Nhựa ABS Cao Cấp</td>
-                </tr>
-                <tr>
-                    <th>Trọng Lượng</th>
-                    <td>350g</td>
-                </tr>
-                <tr>
-                    <th>Tiêu Chuẩn</th>
-                    <td>EN 397, ANSI Z89.1</td>
-                </tr>
-            </table>
-        </div>
 
-        <div class="row my-4">
-            <div class="row gy-4">
-                <h4 class="text-center"><strong>Sản phẩm liên quan</strong></h4>
-                <!-- Thêm sản phẩm khác -->
-                <div class="col-md-3 col-sm-6 col-6">
-                    <div class="custom-product-card">
-                        <a href="#">
-                            <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
-                                alt="Tên sản phẩm" class="custom-product-image">
-                            <h2 class="custom-product-title">
-                                Java Programming for Beginners
-                            </h2>
-                        </a>
-                        <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-6">
-                    <div class="custom-product-card">
-                        <a href="#">
-                            <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
-                                alt="Tên sản phẩm" class="custom-product-image">
-                            <h2 class="custom-product-title">
-                                Java Programming for Beginners
-                            </h2>
-                        </a>
-                        <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-6">
-                    <div class="custom-product-card">
-                        <a href="#">
-                            <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
-                                alt="Tên sản phẩm" class="custom-product-image">
-                            <h2 class="custom-product-title">
-                                Java Programming for Beginners
-                            </h2>
-                        </a>
-                        <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-6">
-                    <div class="custom-product-card">
-                        <a href="#">
-                            <img src="assets/images/product/best-selling/thiet-bi-do-va-phan-tich-chat-luong-dien-nang-hioki-pq3198-4-300x300.avif"
-                                alt="Tên sản phẩm" class="custom-product-image">
-                            <h2 class="custom-product-title">
-                                Java Programming for Beginners
-                            </h2>
-                        </a>
-                        <a href="tel:123456789" class="custom-contact-button">Liên hệ ngay</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     </div>
-    </div>
-
-
-
-
-
-
-
+    <!-- End Main Content -->
 
     <!-- Mobile Category Menu -->
     <div class="mobile-category-menu">
@@ -378,8 +393,44 @@
     </div>
     <!-- End Mobile Category Menu -->
 
+    <!-- Mobile Category Menu -->
+    <!-- Mobile Filter Product -->
+    <div class="mobile-filter-product">
+        <div class="filter-header">
+            <h5 class="mb-0">Bộ lọc sản phẩm</h5>
+        </div>
+        <div class="filter-body">
+            <form id="filterForm">
+                <!-- Khoảng giá -->
+                <div class="filter-group">
+                    <label for="priceRange">Khoảng giá</label>
+                    <select id="priceRange" class="form-control">
+                        <option value="">Tất cả</option>
+                        <option value="under-1m">Dưới 1 triệu</option>
+                        <option value="1m-5m">1 triệu - 5 triệu</option>
+                        <option value="above-5m">Trên 5 triệu</option>
+                    </select>
+                </div>
+
+                <!-- Thương hiệu -->
+                <div class="filter-group">
+                    <label for="brand">Thương hiệu</label>
+                    <select id="brand" class="form-control">
+                        <option value="">Tất cả</option>
+                        <option value="asus">ASUS</option>
+                        <option value="dell">Dell</option>
+                        <option value="hp">HP</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Mobile Filter Product -->
+
+    <!-- End Mobile Category Menu -->
+
     <!-- Desktop Contact Bar -->
-    <div class="contact-bar">
+    <div class="contact-bar desk-filter-product">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-auto">
@@ -404,6 +455,10 @@
 
     <!-- Mobile Bottom Navigation -->
     <nav class="mobile-bottom-nav">
+        <a href="#" class="nav-item nav-link" id="toggleFilterProduct">
+            <i class="fas fa-filter"></i>
+            Bộ Lọc
+        </a>
         <a href="#" class="nav-item nav-link" id="toggleCategories">
             <i class="fas fa-list"></i>
             Danh mục
@@ -508,25 +563,35 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <script>
         // Toggle mobile category menu
+        const categoryMenu = document.querySelector('.mobile-category-menu');
+        const filterProduct = document.querySelector('.mobile-filter-product');
+        const filterSection = document.querySelector('.filter-section');
+
         document.getElementById('toggleCategories').addEventListener('click', function (e) {
             e.preventDefault();
-            const categoryMenu = document.querySelector('.mobile-category-menu');
             categoryMenu.classList.toggle('show');
+            filterProduct.classList.remove('show');
+        });
+
+        document.getElementById('toggleFilterProduct').addEventListener('click', function (e) {
+            e.preventDefault();
+            filterProduct.classList.toggle('show');
+            categoryMenu.classList.remove('show');
         });
 
         // Xử lý responsive menu
         function handleResponsiveMenu() {
-            const categoryMenu = document.querySelector('.mobile-category-menu');
             const width = window.innerWidth;
 
             // Reset trạng thái của mobile menu khi chuyển breakpoint
             if (width >= 992) { // Desktop
                 categoryMenu.classList.remove('show');
+                filterSection.classList.remove('show');
                 // Đóng tất cả các accordion items
                 const accordionItems = document.querySelectorAll('.mobile-category-menu .accordion-collapse');
                 accordionItems.forEach(item => {
@@ -550,19 +615,8 @@
         document.addEventListener('DOMContentLoaded', handleResponsiveMenu);
     </script>
 
-    <script>
-        document.querySelectorAll('.thumbnail-image').forEach(thumbnail => {
-            thumbnail.addEventListener('click', function () {
-                const mainImage = document.querySelector('.main-image');
-                if (mainImage.src !== this.src) {
-                    mainImage.src = this.src;
-                    document.querySelectorAll('.thumbnail-image').forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                }
-            });
-        });
 
-    </script>
+
 </body>
 
 </html>

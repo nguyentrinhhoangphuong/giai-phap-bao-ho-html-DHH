@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #15202B;
+  --primary-color: #161f29;
   --secondary-color: #ff6b00;
   --light-gray: #f8f9fa;
   --light-blue: #2980d6;
@@ -424,19 +424,14 @@ h6 {
   }
 }
 
-/* SLICK */
 /* Hiệu ứng hover cho sản phẩm */
 .product {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* Thay đổi từ space-between sang flex-start */
-  align-items: center;
-  text-decoration: none;
-  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
   transition: transform 0.3s ease;
-  height: 100%;
-  position: relative;
 }
 
 .product:hover {
@@ -484,55 +479,6 @@ h6 {
   color: var(--light-blue);
 }
 
-/* Kiểu dáng cho nút điều hướng */
-/* Tùy chỉnh style cho các nút điều hướng */
-.slick-prev,
-.slick-next {
-  width: 40px;
-  /* Kích thước nút */
-  height: 40px;
-  background: #fff;
-  /* Màu nền */
-  z-index: 1;
-  /* Đảm bảo nút hiển thị trên các phần tử khác */
-}
-
-/* Vị trí của các nút */
-.slick-prev {
-  left: -20px;
-  /* Di chuyển nút prev ra ngoài */
-}
-
-.slick-next {
-  right: -20px;
-  /* Di chuyển nút next ra ngoài */
-}
-
-/* Tùy chỉnh mũi tên */
-.slick-prev:before,
-.slick-next:before {
-  font-size: 1rem;
-  color: #242424;
-  /* Màu mũi tên */
-  opacity: 1;
-}
-
-/* Hiệu ứng hover */
-.slick-prev:hover,
-.slick-next:hover {
-  /* Màu nền khi hover */
-}
-
-/* Responsive cho màn hình nhỏ */
-@media (max-width: 768px) {
-  .slick-prev {
-    left: 5px;
-  }
-
-  .slick-next {
-    right: 5px;
-  }
-}
 
 footer {
   font-size: 14px;
@@ -785,3 +731,165 @@ footer .form-control::placeholder {
   }
 }
 
+
+
+
+
+
+
+
+
+
+/* ========================================================= DANH SÁCH SẢN PHẨM */
+.filter-container {
+  background-color: var(--light-gray);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.custom-product-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-product-card a {
+  text-decoration: none;
+}
+
+.custom-product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.custom-product-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+  display: -webkit-box; /* Tạo một container linh hoạt */
+  -webkit-box-orient: vertical; /* Định hướng hiển thị theo chiều dọc */
+  -webkit-line-clamp: 2; /* Hiển thị tối đa 2 dòng */
+  overflow: hidden; /* Ẩn phần vượt quá */
+  text-overflow: ellipsis; /* Thêm dấu ba chấm */
+}
+
+
+.custom-contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-contact-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Filter Menu */
+.mobile-filter-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 999;
+  display: none;
+  max-height: 80vh;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.mobile-filter-menu .filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-filter-menu .filter-body {
+  padding: 15px;
+}
+
+.mobile-filter-menu .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+
+/* Mobile Filter Product */
+.mobile-filter-product {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 999;
+  display: none;
+  max-height: 80vh;
+  /* Increased height for better visibility */
+  overflow-y: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-filter-product.show {
+  display: block;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-header h5 {
+  margin: 0;
+}
+
+.filter-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.filter-body {
+  padding: 15px;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+  .filter-container {
+      position: sticky;
+      top: 20px; /* Khoảng cách so với đầu trang */
+      max-height: calc(100vh - 40px); /* Đảm bảo không vượt quá chiều cao màn hình */
+      overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+  }
+}

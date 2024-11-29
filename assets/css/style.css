@@ -779,7 +779,7 @@ footer .form-control::placeholder {
   text-overflow: ellipsis; /* Thêm dấu ba chấm */
 }
 
-.custom-contact-button {
+.custom-contact-button, .custom-contact-button-detail {
   display: inline-block;
   padding: 10px 10px;
   background-color: var(--primary-color);
@@ -907,6 +907,10 @@ footer .form-control::placeholder {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+  }
+
+  .custom-contact-button-detail{
+    font-size: 14px;
   }
 }
 

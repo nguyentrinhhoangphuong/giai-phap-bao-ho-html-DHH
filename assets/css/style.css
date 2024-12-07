@@ -95,13 +95,13 @@ h6 {
   border: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-top: 0;
-  left: 100% !important;
+  /* left: 100% !important; */
   /* Force left positioning */
-  top: 0 !important;
+  /* top: 0 !important; */
   /* Force top positioning */
   margin-left: 0.1rem;
   display: none;
-  min-width: 400px;
+  min-width: max-content;
   /* Increased width for two columns */
   padding: 1rem;
   transform: none !important;
@@ -144,7 +144,11 @@ h6 {
 
 .dropdown-item {
   text-align: left;
+  word-wrap: break-word; /* Cho phép từ dài tự động xuống dòng */
+  white-space: normal;   /* Cho phép văn bản xuống dòng */
+  overflow-wrap: break-word; /* Đảm bảo từ dài không tràn */
 }
+
 
 .dropdown-toggle {
   position: relative;
